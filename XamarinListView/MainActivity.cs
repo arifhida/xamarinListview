@@ -27,7 +27,8 @@ namespace XamarinListView
 
         private void MListview_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            throw new System.NotImplementedException();
+            var message = mList[e.Position].FirstName;
+            Toast.MakeText(this, message, ToastLength.Long).Show();
         }
 
         private List<Person> createList()
